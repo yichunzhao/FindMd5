@@ -9,20 +9,19 @@ package locatemd5key;
  *
  * @author YNZ
  */
-public class LocateMd5Key {
+public class usingChar {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        int a = 'a';
+        //int b = 1 + a;
         
-        //System.out.println(""+Dictionary.getDictionary());
-        String[] strs = Dictionary.getDictionary().split("\r\n");
-        System.out.println("size "+ strs.length);
-        for(String str:strs){
-            System.out.println(str+" ");
-        }
-                
+        do {
+            a++;
+            System.out.println((char) a);
+        } while ('z' != (char) a);
     }
 
 }
