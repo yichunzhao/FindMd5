@@ -13,19 +13,24 @@ import java.util.HashMap;
  */
 public class Char2Num {
 
-    /**
-     *
-     */
     public static final HashMap<Character, Integer> charNum = new HashMap<>();
 
     static {
 
         for (int n = 1, c = 'a'; c <= 'z'; c++, n++) {
             Integer b = charNum.put((char) c, n);
-            if (b != null) {
-                
-            }
         }
+    }
+
+    public static long convert(char[] word) {
+        if(null==charNum) throw new NullPointerException();
+        
+        long wordNum = 0;
+        for (char c : word) {
+            
+            wordNum = wordNum + charNum.get(c);
+        }
+        return wordNum;
     }
 
 }

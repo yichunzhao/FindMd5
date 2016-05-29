@@ -18,9 +18,10 @@ public class LocateMd5Key {
         
         //System.out.println(""+Dictionary.getDictionary());
         String[] strs = Dictionary.getDictionary().split("\r\n");
-        System.out.println("size "+ strs.length);
+        
         for(String str:strs){
-            System.out.println(str+" ");
+            long num = Char2Num.convert(str.toCharArray());
+            System.out.print(num+" ");
         }
                 
     }
